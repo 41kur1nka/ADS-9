@@ -69,7 +69,7 @@ std::vector<std::vector<char>> getAllPerms(PMTree& tree) {
 
 std::vector<char> getPerm1(PMTree& tree, int num) {
   auto perms = getAllPerms(tree);
-  if (num <= 0 || num > static_cast(int)perms.size()) return {};
+  if (num <= 0 || num > static_cast<int>(perms.size())) return {};
   return perms[num - 1];
 }
 
@@ -81,7 +81,7 @@ size_t factorial(int n) {
 
 std::vector<char> getPerm2(PMTree& tree, int num) {
   int n = tree.input.size();
-  if (num <= 0 || num > (int)factorial(n)) return {};
+  if (num <= 0 || num > static_cast<int>(factorial(n))) return {};
   std::vector<char> elems = tree.input;
   std::sort(elems.begin(), elems.end());
   std::vector<char> result;
