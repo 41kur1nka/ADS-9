@@ -9,13 +9,13 @@ class PMTree {
   struct Node {
     char value;
     std::vector<Node*> children;
-    Node(char v) : value(v) {}
+    explicit Node(char v) : value(v) {}
   };
 
   Node* root;
   std::vector<char> input;
 
-  PMTree(const std::vector<char>& in);
+  explicit PMTree(const std::vector<char>& in);
   ~PMTree();
 
  private:
