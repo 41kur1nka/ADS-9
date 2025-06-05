@@ -32,7 +32,7 @@ int main() {
     PMTree t2(in2);
 
     std::mt19937 gen(42);
-    std::uniform_int_distribution<> dist(1, (int)factorial(n));
+    std::uniform_int_distribution<> dist(1, static_cast<int>(factorial(n)));
 
     int rnd_num = dist(gen);
 
